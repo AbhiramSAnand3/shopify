@@ -10,6 +10,7 @@ import Login from "./components/Login"
 import ProductDetails from "./components/ProductDetails"
 import ProfileDashboard from "./components/ProfileDash"
 import MyCart from "./components/MyCart"
+import ProtectedRoute from "./components/ProtectedRoute"
 function App() {
 
 
@@ -25,6 +26,15 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/product/:id" element={<ProductDetails/>} />
         <Route path="/profile" element={<ProfileDashboard/>}/>
+
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <MyCart />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/cart" element={<MyCart/>}/>
 
 
