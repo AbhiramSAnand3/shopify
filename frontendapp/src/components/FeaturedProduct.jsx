@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { ProductData } from "../FeaturedProduct";
 import { useEffect, useState } from "react";
@@ -18,7 +19,7 @@ const FeaturedProduct = () => {
           const data = await response.json();
           setProductData(data);
         } catch (err) {
-          console.error('Error fetching artworks:', err);
+          console.error('Error fetching Products:', err);
         }
 
       }
